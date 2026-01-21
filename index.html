@@ -4,203 +4,539 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Título y SEO -->
-    <title>Suéteres y Camisetas Personalizadas | Estado Barinas</title>
-    <meta name="description" content="Personaliza tu estilo en Barinas. Suéteres y camisetas personalizadas. Envíos a todo el estado. Llama al +58 426-1728306.">
-    <meta name="keywords" content="camisetas personalizadas barinas, suéteres venezuela, regalos personalizados, estampados de camisas, camisetas familia, barinas, obispos, socopo, santa bárbara, buzos personalizados">
-    <meta name="geo.region" content="VE-BARINAS">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://personalizados.pages.dev/">
+    <!-- SEO Meta Tags -->
+    <title>AMYSTUDIO 🟢 | Uñas, Masajes y Spa en Maipú</title>
+    <meta name="description" content="AMYSTUDIO Maipú: Expertos en uñas acrílicas, uñas de gel, manicura rusa, uñas polygel. Microblading, masajes terapéuticos, drenaje linfático y spa para parejas.">
+    <meta name="keywords" content="uñas maipú, manicura maipú, uñas acrílicas, uñas de gel, uñas polygel, microblading cejas, masajes terapéuticos, drenaje linfático, maderoterapia, spa para parejas, pedicure spa, uñas 2023">
+    <meta name="author" content="AMYSTUDIO">
+    <meta name="robots" content="index, follow">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="images/logo-grado33.jpg">
+    <!-- Fuentes e Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Estilos CSS ACTUALIZADOS -->
     <style>
-        /* --- VARIABLES (NUEVA PALETA: NEGRO, VERDE, AMARILLO, BLANCO) --- */
+        /* --- VARIABLES CSS --- */
         :root {
-            --primary: #27ae60;      /* Verde vibrante para botones y acciones */
-            --primary-dark: #1e8449; /* Verde más oscuro para hover */
-            --secondary: #000000;    /* Negro puro para textos y títulos principales */
-            --accent: #f1c40f;       /* Amarillo para subtítulos y detalles */
-            --bg-light: #f8f9fa;     /* Blanco humo muy suave para secciones alternas */
-            --white: #ffffff;        /* Blanco puro */
-            --text-dark: #000000;    /* Texto oscuro */
-            --text-gray: #444444;    /* Gris oscuro para párrafos */
-            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            --max-width: 1200px;
-            --header-height: 80px;
+            --primary-color: #2E8B57; 
+            --primary-dark: #1A5233; 
+            --accent-color: #D4AF37; 
+            --text-dark: #333333;
+            --text-light: #555555;
+            --bg-light: #F4F9F4; 
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(46, 139, 87, 0.15);
         }
 
-        /* --- RESET --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
+        /* --- RESET & BASICS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* --- UTILIDADES --- */
-        .container { width: 95%; max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: 80px 0; }
-        .text-center { text-align: center; }
-        .mb-20 { margin-bottom: 20px; }
-        .mb-40 { margin-bottom: 40px; }
+        html {
+            scroll-behavior: smooth;
+        }
 
-        /* Tipografía ACTUALIZADA */
-        h1, h2, h3 { font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
-        h1 { font-size: 3rem; text-transform: uppercase; letter-spacing: -1px; color: var(--white); text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        h2 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 50px; text-align: center; position: relative; }
-        h2::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--accent); margin: 15px auto 0; border-radius: 2px; }
-        
-        /* Subtítulos en Amarillo como pediste */
-        h3 { font-size: 1.5rem; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; font-weight: 700; }
-        
-        p { margin-bottom: 15px; font-size: 1.05rem; color: var(--text-gray); }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: var(--bg-light);
+        }
 
-        /* Botones ACTUALIZADOS */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
         .btn {
-            display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none;
-            font-weight: 700; font-size: 1rem; transition: all 0.3s ease; cursor: pointer; border: none;
-            text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
         }
-        .btn-primary { background-color: var(--primary); color: var(--white); }
-        .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 8px 15px rgba(39, 174, 96, 0.3); }
-        
-        .btn-accent { background-color: var(--accent); color: var(--secondary); }
-        .btn-accent:hover { background-color: #d4ac0d; transform: translateY(-3px); }
-        
-        .btn-outline { background-color: transparent; border: 2px solid var(--primary); color: var(--primary); }
-        .btn-outline:hover { background-color: var(--primary); color: white; }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         /* --- HEADER --- */
         header {
             background-color: var(--white);
-            height: var(--header-height);
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1); display: flex; align-items: center;
-            border-bottom: 3px solid var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
         }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo-container img { height: 50px; width: auto; display: block; } 
 
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav a { text-decoration: none; color: var(--secondary); font-weight: 700; font-size: 1rem; transition: color 0.3s; }
-        nav a:hover { color: var(--primary); }
-        
-        .mobile-menu-btn { display: none; font-size: 1.8rem; background: none; border: none; cursor: pointer; color: var(--primary); }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        /* --- HERO --- */
+        /* Estilos para la imagen del logo */
+        .logo img {
+            height: 50px; /* Altura del logo ajustada */
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-dark);
+        }
+
+        /* --- HERO SECTION --- */
         .hero {
-            height: 85vh; min-height: 600px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('images/portada-grado33-tienda-de-buzos-personalziados-en-rionegro.jpg');
-            background-size: cover; background-position: center;
-            display: flex; align-items: center; justify-content: center; text-align: center;
-            color: white; padding-top: var(--header-height);
+            /* FONDO ACTUALIZADO A portada.jpg */
+            background: url('images/portada.jpg') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
         }
-        .hero-content { max-width: 900px; padding: 20px; }
-        .hero-content p { font-size: 1.3rem; color: #f0f0f0; margin-bottom: 40px; font-weight: 400; }
 
-        /* --- MUNICIPIOS --- */
-        .municipios-section { background-color: var(--secondary); color: white; padding: 20px 0; border-bottom: 5px solid var(--accent); }
-        .municipios-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; }
-        .municipios-list li { background: #333; padding: 6px 12px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); font-size: 0.85rem; font-weight: 600; color: white; border: 1px solid var(--primary); }
-        .municipios-section p { color: var(--accent); font-weight: bold; text-transform: uppercase; }
-
-        /* --- CATEGORIES GRID --- */
-        .category-intro { max-width: 800px; margin: 0 auto 50px auto; text-align: center; }
-        
-        .cat-section-title { 
-            font-size: 2rem; color: var(--secondary); margin: 70px 0 30px 0; 
-            text-align: left; border-left: 5px solid var(--accent); padding-left: 15px; background: linear-gradient(90deg, #f0f0f0, transparent); padding: 10px 15px; border-radius: 0 10px 10px 0;
+        /* Capa oscura para mejorar la lectura del texto sobre la imagen */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen */
+            z-index: 1;
         }
-        
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
-        
-        /* TARJETA DE PRODUCTO */
-        .product-card {
-            background: var(--white); border-radius: 15px; overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.4s ease; display: flex; flex-direction: column;
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* --- SERVICES GRID --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .service-list li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+        }
+
+        .service-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* --- SEO CONTENT BLOCKS --- */
+        .seo-block {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .seo-block h3 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        .seo-block p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .keyword-highlight {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* --- GALLERY SECTION --- */
+        .gallery {
+            background-color: #fff;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(46, 139, 87, 0.9));
+            padding: 15px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay p {
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            background-color: #fcfcfc;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 20px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* --- CONTACT --- */
+        .contact-clean {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #fdfbf7 0%, #ffffff 100%);
             border: 1px solid #eee;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
         }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); border-color: var(--accent); }
-        
-        .card-img-wrapper { height: 320px; overflow: hidden; position: relative; background-color: #eee; display: flex; align-items: center; justify-content: center; }
-        .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; max-width: 100%; }
-        .product-card:hover .card-img-wrapper img { transform: scale(1.05); }
-        
-        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-body p { font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
 
-        /* --- MATERIALES (NUEVO) --- */
-        .materials-section { background-color: var(--secondary); color: white; padding: 60px 0; }
-        .materials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .material-item { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; text-align: center; border: 1px solid var(--primary); transition: 0.3s; }
-        .material-item:hover { background: var(--primary); transform: translateY(-5px); }
-        .material-item h4 { color: var(--accent); font-size: 1.2rem; margin-bottom: 10px; }
-        .material-item p { color: #ddd; font-size: 0.9rem; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
 
-        /* --- BLOG --- */
-        .blog-section { background-color: var(--bg-light); border-top: 1px solid #eee; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .blog-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.3s; border-top: 4px solid var(--primary); }
-        .blog-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
-        .blog-tag { background: var(--secondary); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; font-weight: bold; display: inline-block; margin-bottom: 15px; }
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
 
-        /* --- FAQ --- */
-        .faq-section { background-color: var(--white); }
-        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
-        .faq-item:last-child { border-bottom: none; }
-        details { cursor: pointer; }
-        summary { font-weight: 700; font-size: 1.1rem; color: var(--secondary); list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
-        summary::-webkit-details-marker { display: none; }
-        summary::after { content: '+'; font-size: 1.5rem; color: var(--primary); transition: 0.3s; }
-        details[open] summary::after { content: '-'; transform: rotate(180deg); color: var(--accent); }
-        
-        .faq-content { padding: 10px 0 0 0; color: var(--text-gray); font-size: 1rem; line-height: 1.7; background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); }
-
-        /* --- SEASONAL BANNER --- */
-        .seasonal-banner { background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%); color: white; padding: 60px 0; text-align: center; }
+        .contact-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
 
         /* --- FOOTER --- */
-        footer { background-color: var(--secondary); color: #ffffff; padding: 70px 0 20px; border-top: 5px solid var(--primary); }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 50px; }
-        
-        /* Forzar color blanco en todo el footer */
-        .footer-col h4, 
-        .footer-col p, 
-        .footer-col li, 
-        .footer-col a { 
-            color: #ffffff !important; 
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
         }
-        
-        .footer-col h4 { font-size: 1.2rem; margin-bottom: 25px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 12px; }
-        .footer-col a { text-decoration: none; transition: 0.3s; }
-        .footer-col a:hover { color: var(--accent) !important; padding-left: 5px; text-decoration: underline; }
 
-        /* --- WHATSAPP --- */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* --- FLOATING WHATSAPP --- */
         .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px; background-color: #25d366;
-            color: white; width: 65px; height: 65px; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 2000; transition: transform 0.3s; text-decoration: none; border: 3px solid white;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1001;
+            transition: var(--transition);
         }
-        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
-        .whatsapp-float svg { width: 40px; height: 40px; fill: white; }
 
-        /* --- SEO CLOUD --- */
-        .seo-cloud { background-color: #222; padding: 40px 0; border-top: 1px solid #333; }
-        .tag-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        .tag-cloud span { background: #333; padding: 8px 15px; border-radius: 4px; border: 1px solid #444; color: #aaa; font-size: 0.85rem; transition: 0.2s; cursor: default; }
-        .tag-cloud span:hover { border-color: var(--accent); color: var(--white); background: #444; }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20b857;
+        }
 
         /* --- RESPONSIVE --- */
-        @media (max-width: 900px) {
-            h1 { font-size: 2.2rem; }
-            .hero-content p { font-size: 1.1rem; }
-            .cat-section-title { text-align: center; border-left: none; border-bottom: 3px solid var(--accent); padding-left: 0; padding-bottom: 10px; margin-top: 50px; background: transparent; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: var(--header-height); left: 0; width: 100%; background: white; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-bottom: 5px solid var(--primary); }
-            .nav-menu.active { display: flex; }
-            .mobile-menu-btn { display: block; }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -209,456 +545,472 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo-container">
-                <img src="images/logo-grado33.jpg" alt="Estilos Grado33 Logo">
-            </a>
-            <button class="mobile-menu-btn" aria-label="Menú" onclick="toggleMenu()">☰</button>
+            <!-- Logo actualizado a imagen -->
+            <div class="logo">
+                <img src="images/logo2.jpg" alt="AMYSTUDIO Logo">
+            </div>
             <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
-                    <li><a href="#sueteres" onclick="toggleMenu()">Suéteres</a></li>
-                    <li><a href="#materiales" onclick="toggleMenu()">Materiales</a></li>
-                    <li><a href="#catalogo-completo" onclick="toggleMenu()">Catálogo</a></li>
-                    <li><a href="https://wa.me/584261728306" class="btn btn-primary" style="padding: 10px 20px;">Pedir Ahora</a></li>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#galeria-especial">Especiales</a></li>
+                    <li><a href="#faq">Dudas</a></li>
+                    <li><a href="#contacto" class="btn">Reservar</a></li>
                 </ul>
             </nav>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </header>
 
-    <!-- Barra de Municipios (Negro y Amarillo) -->
-    <div class="municipios-section">
-        <div class="container text-center">
-            <p>Cubrimos todo el Estado Barinas y envíos nacionales</p>
-            <ul class="municipios-list">
-                <li>Barinas</li> <li>Santa Bárbara</li> <li>Obispos</li> <li>Socopó</li> <li>Arismendi</li>
-                <li>Bolívar</li> <li>Cruz Paredes</li> <li>Ezequiel Zamora</li> <li>Pedro Briceño</li> <li>Rojas</li> <li>Sosa</li> <li>Alberto Arvelo</li>
-            </ul>
-        </div>
-    </div>
-
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <h1>Diseños de Alto Impacto</h1>
-            <p>La mejor tienda de **Suéteres y Camisetas Personalizadas** en Barinas. Colores vibrantes, telas de calidad y envíos rápidos.</p>
-            <div style="margin-top: 30px;">
-                <a href="#catalogo-completo" class="btn btn-accent">🎨 VER MODELOS</a>
-                <a href="#faq" class="btn btn-outline" style="color: white; border-color: white;">DUDAS</a>
+        <div class="hero-content">
+            <h1>Tu Oasis de Belleza y Bienestar en Maipú</h1>
+            <p>Expertos en Uñas, Microblading y Masajes Terapéuticos.</p>
+            <a href="https://wa.me/56942431681" class="btn">Reservar por WhatsApp</a>
+            <a href="#galeria" class="btn btn-outline" style="margin-left: 10px;">Ver Trabajos</a>
+        </div>
+    </section>
+
+    <!-- Servicios Principales -->
+    <section id="servicios" class="section-padding container">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <p class="section-subtitle">Calidad premium en uñas, cejas y relajación en el corazón de Maipú.</p>
+        
+        <div class="services-grid">
+            <!-- Uñas -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+                <h3>Uñas & Manicure</h3>
+                <p>Las últimas tendencias en uñas 2023.</p>
+                <ul class="service-list">
+                    <li>Uñas Acrílicas & Uñas de Gel</li>
+                    <li>Uñas Polygel & Soft Gel</li>
+                    <li>Manicura Rusa & Semipermanente</li>
+                    <li>Uñas Esculpidas & Press On</li>
+                </ul>
+            </div>
+
+            <!-- Cejas -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-eye"></i></div>
+                <h3>Cejas & Microblading</h3>
+                <p>Diseño de cejas perfecto y natural.</p>
+                <ul class="service-list">
+                    <li>Microblading Cejas Pelo a Pelo</li>
+                    <li>Laminado de Cejas & Tinte</li>
+                    <li>Diseño & Depilación de Cejas</li>
+                    <li>Cejas Perfectas & Tatuadas</li>
+                </ul>
+            </div>
+
+            <!-- Masajes -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-hot-tub-person"></i></div>
+                <h3>Masajes & Terapias</h3>
+                <p>Relajación profunda y salud.</p>
+                <ul class="service-list">
+                    <li>Masajes Terapéuticos & Descontracturantes</li>
+                    <li>Drenaje Linfático & Maderoterapia</li>
+                    <li>Masajes Reductores & Deportivos</li>
+                    <li>Quiromasaje & Masoterapia</li>
+                </ul>
+            </div>
+
+            <!-- Pedicure -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-foot"></i></div>
+                <h3>Pedicure Spa</h3>
+                <p>Cuidado profesional de pies.</p>
+                <ul class="service-list">
+                    <li>Pedicure Spa & Cuidado de Pies</li>
+                    <li>Reflexología Podal</li>
+                    <li>Esmalte OPI & Semipermanente</li>
+                    <li>Pies Spa & Tratamiento Profesional</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Main Catalog / Suéteres -->
-    <section id="sueteres" class="section-padding">
+    <!-- Sección Especialidades y SEO -->
+    <section id="especialidades" class="section-padding" style="background-color: #fff;">
         <div class="container">
-            <div class="category-intro">
-                <h2>Categorías de Suéteres</h2>
-                <p>Selecciona el suéter base para tu diseño personalizado.</p>
+            <h2 class="section-title">Especialidades y Tendencias</h2>
+            <p class="section-subtitle">Por qué elegirnos para tu belleza y bienestar en Maipú.</p>
+
+            <div class="seo-block">
+                <h3>✨ Tendencias en Uñas y Manicura</h3>
+                <p>En <strong>AMYSTUDIO Maipú</strong> nos mantenemos a la vanguardia. Ofrecemos <span class="keyword-highlight">uñas decoradas</span> y <span class="keyword-highlight">diseños de uñas</span> únicos, desde <span class="keyword-highlight">uñas sencillas y elegantes</span> para el día a día, hasta <span class="keyword-highlight">uñas francesas modernas</span>. ¿Buscas algo específico? Somos expertos en <span class="keyword-highlight">uñas esculpidas</span>, <span class="keyword-highlight">uñas press on</span> y la técnica <span class="keyword-highlight">shellac uñas</span>.</p>
             </div>
 
-            <!-- CATEGORIA 1: MARCA -->
-            <h3 class="cat-section-title">Suéteres de Marca</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama01.jpg" alt="Suéter Adidas Mujer"></div>
-                    <div class="card-body">
-                        <h3>Suéteres Adidas y Nike</h3>
-                        <p>Personaliza los modelos más buscados. Buzos Adidas (Essentials, Originals) y Buzos Nike (Icon Clash, Running).</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20de%20marca" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama02.jpg" alt="Suéter Puma Mujer"></div>
-                    <div class="card-body">
-                        <h3>Estilo Deportivo Puma</h3>
-                        <p>Buzos Puma de estilo deportivo y casual. Perfectos para estampar logos de gimnasio o equipos.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20Puma" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/damas/buzo-dama03.jpg" alt="Suéter Running Mujer"></div>
-                    <div class="card-body">
-                        <h3>Tecnología Running</h3>
-                        <p>Modelos técnicos listos para recibir tu nombre o número en dorado o plateado.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20sueter%20Running" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- CATEGORIA 2: OVERSIZE -->
-            <h3 class="cat-section-title">Suéteres Oversize Personalizados</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero01.jpg" alt="Suéter Oversize Hombre"></div>
-                    <div class="card-body">
-                        <h3>La Tendencia Oversize</h3>
-                        <p>Nuestros suéteres oversize en algodón premium son el canvas perfecto para tu creatividad.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Oversize" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero02.jpg" alt="Suéter Oversize Urbano"></div>
-                    <div class="card-body">
-                        <h3>Streetwear Personalizado</h3>
-                        <p>Disponibles en todos los colores para personalizar. Elige la tela base y envíanos tu arte.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Oversize%20Urbano" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/caballeros/buzo-caballero03.jpg" alt="Suéter Oversize Negro"></div>
-                    <div class="card-body">
-                        <h3>Base en Negro y Gris</h3>
-                        <p>Las bases oscuras son las mejores para diseños vibrantes con neones o blancos.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20un%20Oversize%20Negro" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- CATEGORIA 3: LANA -->
-            <h3 class="cat-section-title">Suéteres de Lana Personalizados</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja01.jpg" alt="Suéter Lana Navidad"></div>
-                    <div class="card-body">
-                        <h3>Calidez con Tu Firma</h3>
-                        <p>Los suéteres de lana más abrigados ahora pueden ser personalizados. Perfectos para invierno.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Lana%20Barinas" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja02.jpg" alt="Suéter Lana Cuello Tortuga"></div>
-                    <div class="card-body">
-                        <h3>Opciones de Cuello y Cortes</h3>
-                        <p>Opciones de cuello tortuga, capucha y largos. Elige el corte que más te abrigue.</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Lana%20Cortes" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/pareja/buzo-pareja03.jpg" alt="Suéter Lana Familia"></div>
-                    <div class="card-body">
-                        <h3>Conjuntos Familiares</h3>
-                        <p>Personaliza el suéter de lana para toda la familia (Papá, Mamá, Hijos).</p>
-                        <a href="https://wa.me/584261728306?text=Hola,%20quiero%20Familias" class="btn btn-outline">Pedir</a>
-                    </div>
-                </article>
+            <div class="seo-block">
+                <h3>💆 Para Quién: Una Experiencia Para Todos</h3>
+                <p>Creemos que la belleza es para todos. Ofrecemos <span class="keyword-highlight">uñas para mujeres</span> exigentes, pero también <span class="keyword-highlight">uñas para niñas</span> con adorables diseños de <span class="keyword-highlight">uñas de princesas</span> y <span class="keyword-highlight">manicura infantil</span>. Para caballeros, contamos con <span class="keyword-highlight">cuidado masculino</span>, <span class="keyword-highlight">pedicure para hombres</span> y <span class="keyword-highlight">masajes para hombres</span>.</p>
             </div>
         </div>
     </section>
 
-    <!-- GALERÍA DE CAMISETAS (BASE) -->
-    <section id="camisetas" class="section-padding" style="background-color: #f0f0f0;">
+    <!-- Gallery Section 1 (Actualizada a .jpeg) -->
+    <section id="galeria" class="section-padding gallery">
         <div class="container">
-            <h2 class="text-center">Galería de Camisetas Personalizadas</h2>
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
-                <!-- Reutilizando imágenes existentes para la galería principal -->
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Camisa Familia"></div>
-                    <div class="card-body"><h3>Familia</h3><a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Pedir</a></div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-mecanico-personalizada.jpg" alt="Camisa Mecánico"></div>
-                    <div class="card-body"><h3>Mecánico</h3><a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Pedir</a></div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-dinosaurio.jpg" alt="Camisa Dinosaurio"></div>
-                    <div class="card-body"><h3>Dinosaurio</h3><a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Pedir</a></div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-familia.jpg" alt="Camisa Familia"></div>
-                    <div class="card-body"><h3>Familia</h3><a href="https://wa.me/584261728306" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary); font-size:0.8rem;">Pedir</a></div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- NUEVA SECCIÓN: MATERIALES QUE IMPRIMIMOS -->
-    <section id="materiales" class="materials-section">
-        <div class="container">
-            <h2 style="color: white;">Materiales que Imprimimos</h2>
-            <p class="text-center" style="color: #ddd;">Trabajamos con una amplia gama de telas de alta calidad para garantizar la durabilidad de tu diseño.</p>
-            <div class="materials-grid" style="margin-top: 40px;">
-                <div class="material-item">
-                    <h4>Algodón Peached</h4>
-                    <p>Tela suave al tacto, ideal para prendas casuales y uso diario. Muy buena absorción de tintas.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Algodón Ringspun</h4>
-                    <p>Alta resistencia y durabilidad. Hilo de mayor calidad que no se deforma con los lavados.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Dry-Fit / Poliéster</h4>
-                    <p>Tela deportiva ligera que transpira. Perfecta para sublimación a todo color.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Drill / Fanela</h4>
-                    <p>Tela resistente y gruesa, utilizada comúnmente para uniformes de trabajo y camisas de campo.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Lycra Spandex</h4>
-                    <p>Elasticidad superior. Ideal para ropa deportiva ajustada, leggings y bodys.</p>
-                </div>
-                <div class="material-item">
-                    <h4>Lino Premium</h4>
-                    <p>Elegancia y frescura natural. Perfecto para camisas de vestir de alta gama.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NUEVA SECCIÓN: CATÁLOGO COMPLETO (KEYWORDS) -->
-    <section id="catalogo-completo" class="section-padding blog-section">
-        <div class="container">
-            <h2>Catálogo Completo por Temática</h2>
-            <p class="text-center mb-40">Explora nuestras categorías más populares para eventos, empresas y fandoms.</p>
-
-            <!-- SUBSECCIÓN 1: EVENTOS -->
-            <h3 class="cat-section-title">Eventos Especiales</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-cumpleaños.jpg" alt="Camisas de Cumpleaños"></div>
-                    <div class="card-body">
-                        <h3>Cumpleaños</h3>
-                        <p>Camisas-estampadas-para-cumpleaños, playeras-cumpleaños. ¡El regalo perfecto!</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-pareja.jpg" alt="Despedida de Soltera"></div>
-                    <div class="card-body">
-                        <h3>Despedida de Soltera</h3>
-                        <p>Camiseta-despedida-soltera, camisetas-originales. Diseña la noche perfecta.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-navidad.jpg" alt="Camisas Navideñas"></div>
-                    <div class="card-body">
-                        <h3>Navidad</h3>
-                        <p>Camisetas-navidad-personalizadas, playeras-navideñas. Vístete festivo.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- SUBSECCIÓN 2: FAMILIA Y PAREJAS -->
-            <h3 class="cat-section-title">Familia y Parejas</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Día de las Madres"></div>
-                    <div class="card-body">
-                        <h3>Día de las Madres y Padres</h3>
-                        <p>Camisas-del-dia-de-las-madres, playeras-para-papa-e-hija.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-pareja.jpg" alt="Parejas y Amigas"></div>
-                    <div class="card-body">
-                        <h3>Parejas y Amigas</h3>
-                        <p>Blusas-de-amigas-personalizadas, camisas-estampadas-de-parejas.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-familia.jpg" alt="Grupos Familiares"></div>
-                    <div class="card-body">
-                        <h3>Grupos Familiares</h3>
-                        <p>Camisas-para-toda-la-familia, camisas-estampadas-para-hermanos.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- SUBSECCIÓN 3: TRABAJO Y EMPRESAS -->
-            <h3 class="cat-section-title">Trabajo y Empresas</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-mecanico-personalizada.jpg" alt="Camisas de Trabajo"></div>
-                    <div class="card-body">
-                        <h3>Uniformes y Trabajo</h3>
-                        <p>Camisas-de-trabajo-personalizadas, camisas-polo-personalizadas.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-para-cumpleaños.jpg" alt="Publicidad"></div>
-                    <div class="card-body">
-                        <h3>Publicidad y Eventos</h3>
-                        <p>Camisas-publicidad, playeras-promocionales, camisas-para-eventos.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-estampadas-para-familia.jpg" alt="Esports y Equipos"></div>
-                    <div class="card-body">
-                        <h3>Esports y Deportes</h3>
-                        <p>Camisas-esports-personalizadas, camisetas-gamers.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-            </div>
-
-            <!-- SUBSECCIÓN 4: TÉCNICAS Y ESTILOS -->
-            <h3 class="cat-section-title">Estilos y Técnicas</h3>
-            <div class="card-grid">
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-familia.jpg" alt="Sublimación Full Print"></div>
-                    <div class="card-body">
-                        <h3>Sublimación Full Print</h3>
-                        <p>Camisetas-full-print-personalizadas, camisas-sublimadas-con-fotos.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-sonic.jpg" alt="Serigrafía y Vinilo"></div>
-                    <div class="card-body">
-                        <h3>Serigrafía y Vinilo</h3>
-                        <p>Camisas-serigrafiadas, impresión-vinilo-textil.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-wrapper"><img src="images/camisa-personalizada-de-spiderman.jpg" alt=" Bordados"></div>
-                    <div class="card-body">
-                        <h3>Bordados Premium</h3>
-                        <p>Camisas-bordadas-personalizadas, logotipos-empresariales.</p>
-                        <a href="https://wa.me/584261728306" class="btn btn-outline">Cotizar</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEO CLOUD SECTION -->
-    <section class="seo-cloud">
-        <div class="container">
-            <h3 class="text-center" style="margin-bottom: 30px; color: white;">Búsquedas Populares</h3>
-            <div class="tag-cloud">
-                <span>camisetas personalizadas</span>
-                <span>camisas de aniversario</span>
-                <span>camisas de cumpleaños personalizadas</span>
-                <span>camisas de trabajo</span>
-                <span>camisas de empresa</span>
-                <span>camisas estampadas con fotos</span>
-                <span>camisas para día del padre</span>
-                <span>camisas sublimadas</span>
-                <span>camisas polo bordadas</span>
-                <span>playeras personalizadas para boda</span>
-                <span>estampado de camisetas</span>
-                <span>sublimación de playeras</span>
-                <span>camisetas para grupos</span>
-                <span>camisetas personalizadas economicas</span>
-                <span>camisetas originales</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- GUÍA DE PERSONALIZACIÓN -->
-    <section id="proceso" class="section-padding">
-        <div class="container">
-            <h2>Cómo Personalizar</h2>
-            <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <article class="blog-card text-center">
-                    <h3>1️⃣ Elige</h3>
-                    <p>Navega por nuestro catálogo de camisas, playeras y buzos.</p>
-                </article>
-                <article class="blog-card text-center">
-                    <h3>2️⃣ Envía</h3>
-                    <p>Escríbenos por WhatsApp con tu idea, foto o logo.</p>
-                </article>
-                <article class="blog-card text-center">
-                    <h3>3️⃣ Recibe</h3>
-                    <p>Aprobamos el diseño, producimos y enviamos.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ ACTUALIZADO (10 PREGUNTAS) -->
-    <section id="faq" class="section-padding faq-section">
-        <div class="container" style="max-width: 900px;">
-            <h2>Preguntas Frecuentes</h2>
+            <h2 class="section-title">Nuestra Galería Principal</h2>
+            <p class="section-subtitle">Resultados reales de clientes satisfechas en Maipú.</p>
             
-            <div class="faq-item">
-                <details>
-                    <summary>1. ¿Cuál es el pedido mínimo?</summary>
-                    <div class="faq-content">Para ventas al detal (menudeo) trabajamos desde 1 sola unidad. Para pedidos mayoristas y precios especiales, el mínimo es de 10 unidades por diseño.</div>
-                </details>
-            </div>
+            <div class="gallery-grid">
+                <!-- Uñas (10 Fotos) -->
+                <div class="gallery-item">
+                    <img src="images/uñas-acrilicas-elegantes-2023-maipu.jpeg" alt="Uñas acrílicas elegantes 2023 en AMYSTUDIO Maipú">
+                    <div class="gallery-overlay"><p>Uñas Acrílicas</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-gel-semipermanente-diseños-modernos.jpeg" alt="Uñas de gel semipermanente con diseños modernos">
+                    <div class="gallery-overlay"><p>Gel Semipermanente</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/manicura-francesa-blanca-elegante-maipu.jpeg" alt="Manicura francesa blanca elegante en Maipú">
+                    <div class="gallery-overlay"><p>Francesa Elegante</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-navideñas-decoradas-rojo-dorado.jpeg" alt="Uñas navideñas decoradas rojo dorado">
+                    <div class="gallery-overlay"><p>Diseños Navideños</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/diseños-uñas-verano-2023-colores-pastel.jpeg" alt="Diseños uñas verano 2023 colores pastel">
+                    <div class="gallery-overlay"><p>Tendencia Verano</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-esculpidas-gel-acrilico-largas.jpeg" alt="Uñas esculpidas gel acrilico largas">
+                    <div class="gallery-overlay"><p>Uñas Esculpidas</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-sencillas-elegantes-naturales-cortas.jpeg" alt="Uñas sencillas elegantes naturales cortas">
+                    <div class="gallery-overlay"><p>Naturales</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-decoradas-piedras-brillos-fiesta.jpeg" alt="Uñas decoradas piedras brillos fiesta">
+                    <div class="gallery-overlay"><p>Uñas de Fiesta</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-para-boda-novia-blancas-elegantes.jpeg" alt="Uñas para boda novia blancas elegantes">
+                    <div class="gallery-overlay"><p>Uñas Novia</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/manicura-perfecta-semipermanente-profesional.jpeg" alt="Manicura perfecta semipermanente profesional">
+                    <div class="gallery-overlay"><p>Manicura Perfecta</p></div>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>2. ¿Realizan envíos nacionales?</summary>
-                    <div class="faq-content">¡Sí! Realizamos envíos a toda Venezuela mediante empresas de paquetería como MRW, Zoom, Libre Express y Tealca. El tiempo de entrega varía entre 2 a 5 días hábiles dependiendo de la zona.</div>
-                </details>
-            </div>
+                <!-- Cejas (5 Fotos) -->
+                <div class="gallery-item">
+                    <img src="images/microblading-cejas-pelo-pelo-natural-maipu.jpeg" alt="Microblading cejas pelo a pelo natural Maipú">
+                    <div class="gallery-overlay"><p>Microblading</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cejas-perfectas-diseño-perfilado-laminado.jpeg" alt="Cejas perfectas diseño perfilado laminado">
+                    <div class="gallery-overlay"><p>Laminado</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cejas-microblading-antes-despues-resultados.jpeg" alt="Cejas microblading antes después resultados">
+                    <div class="gallery-overlay"><p>Antes y Después</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cejas-tatuadas-semipermanentes-definicion.jpeg" alt="Cejas tatuadas semipermanentes definicion">
+                    <div class="gallery-overlay"><p>Maquillaje Permanente</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/diseño-cejas-naturales-forma-rostro.jpeg" alt="Diseño cejas naturales forma rostro">
+                    <div class="gallery-overlay"><p>Diseño de Rostro</p></div>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>3. ¿Qué formatos de imagen aceptan para el diseño?</summary>
-                    <div class="faq-content">Aceptamos imágenes en alta resolución (JPG, PNG, PDF). Si tienes el diseño en formato vectorial (AI, CDR, EPS) es mucho mejor para garantizar la nitidez.</div>
-                </details>
-            </div>
+                <!-- Masajes (5 Fotos) -->
+                <div class="gallery-item">
+                    <img src="images/masajes-terapeuticos-descontracturantes-espalda.jpeg" alt="Masajes terapeuticos descontracturantes espalda">
+                    <div class="gallery-overlay"><p>Terapia</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/maderoterapia-reductiva-abdomen-piernas.jpeg" alt="Maderoterapia reductiva abdomen piernas">
+                    <div class="gallery-overlay"><p>Maderoterapia</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/drenaje-linfatico-piernas-brazos-corporal.jpeg" alt="Drenaje linfatico piernas brazos corporal">
+                    <div class="gallery-overlay"><p>Drenaje</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masajes-relajantes-antiestres-parejas.jpeg" alt="Masajes relajantes antiestres parejas">
+                    <div class="gallery-overlay"><p>Relajación</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/spa-para-parejas-masajes-romanticos.jpeg" alt="Spa para parejas masajes romanticos">
+                    <div class="gallery-overlay"><p>Parejas</p></div>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>4. ¿Puedo llevar mi propia prenda para estampar?</summary>
-                    <div class="faq-content">Sí, ofrecemos el servicio de "prenda del cliente". Trae tu camisa o suéter y nosotros nos encargamos del estampado. El precio es por unidad estampada.</div>
-                </details>
-            </div>
+                <!-- Pedicure (3 Fotos) -->
+                <div class="gallery-item">
+                    <img src="images/pedicure-spa-profesional-pies-cuidado.jpeg" alt="Pedicure spa profesional pies cuidado">
+                    <div class="gallery-overlay"><p>Pedicure Spa</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/esmaltado-semipermanente-pies-colores.jpeg" alt="Esmaltado semipermanente pies colores">
+                    <div class="gallery-overlay"><p>Esmaltado</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/reflexologia-podal-masaje-pies-relajante.jpeg" alt="Reflexologia podal masaje pies relajante">
+                    <div class="gallery-overlay"><p>Reflexología</p></div>
+                </div>
 
-            <div class="faq-item">
-                <details>
-                    <summary>5. ¿Cuánto tiempo tarda mi pedido?</summary>
-                    <div class="faq-content">Para pedidos personales (1 a 5 prendas): 24 a 48 horas. Para pedidos mayores o corporativos: 3 a 5 días hábiles, dependiendo de la complejidad del diseño.</div>
-                </details>
+                <!-- Estudio (2 Fotos) -->
+                <div class="gallery-item">
+                    <img src="images/amystudio-maipu-interior-salon-moderno.jpeg" alt="AMYSTUDIO Maipu interior salon moderno">
+                    <div class="gallery-overlay"><p>Nuestro Salón</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ambiente-relajante-spa-bienestar-comodidad.jpeg" alt="Ambiente relajante spa bienestar comodidad">
+                    <div class="gallery-overlay"><p>Ambiente Zen</p></div>
+                </div>
             </div>
-
-            <div class="faq-item">
-                <details>
-                    <summary>6. ¿Qué métodos de pago aceptan?</summary>
-                    <div class="faq-content">Aceptamos Pago Móvil (Banesco, Venezuela, 100% Banco, Mercantil), Transferencias bancarias y Zelle (para pagos internacionales o rápidos).</div>
-                </details>
-            </div>
-
-            <div class="faq-item">
-                <details>
-                    <summary>7. ¿Hacen diseños urgentes (Express)?</summary>
-                    <div class="faq-content">Sí, contamos con servicio prioritario. Tienes tu pedido listo el mismo día (si el diseño es aprobado antes de mediodía). Aplica recargo por urgencia.</div>
-                </details>
-            </div>
-
-            <div class="faq-item">
-                <details>
-                    <summary>8. ¿Se lavan bien las camisetas? ¿Se borra el diseño?</summary>
-                    <div class="faq-content">Utilizamos tintas de alta calidad (Plastisol y Vinilo Textil) que garantizan durabilidad. Recomendamos lavar la prenda al revés y no usar plancha directamente sobre el estampado.</div>
-                </details>
-            </div>
-
-            <div class="faq-item">
-                <details>
-                    <summary>9. ¿Hacen envíos a Barinas ciudad y pueblos cercanos?</summary>
-                    <div class="faq-content">Sí, enviamos a domicilio en Barinas ciudad y realizamos envíos a Obispos, Socopó, Santa Bárbara y otros municipios.</div>
-                </details>
-            </div>
-
-            <div class="faq-item">
-                <details>
-                    <summary>10. ¿Garantizan la calidad del estampado?</summary>
-                    <div class="faq-content">Absolutamente. Realizamos una prueba de impresión digital. Antes de producir la cantidad final, enviamos una foto de la primera prenda terminada para tu aprobación total.</div>
-                </details>
-            </div>
-
         </div>
     </section>
 
-    <!-- Seasonal Banner -->
-    <section class="seasonal-banner">
+    <!-- NUEVA GALERÍA DE SERVICIOS ESPECIALES -->
+    <section id="galeria-especial" class="section-padding gallery" style="background-color: #F9F9F9;">
         <div class="container">
-            <h2>🎁 Regalos Inolvidables</h2>
-            <p>Sorprende a tu familia con diseños únicos. Calidad garantizada.</p>
-            <br>
-            <a href="https://wa.me/584261728306?text=Hola,%20necesito%20un%20regalo%20personalizado" class="btn btn-accent">Pedir Cotización</a>
+            <h2 class="section-title">Galería de Servicios Especiales</h2>
+            <p class="section-subtitle">Explora nuestros tratamientos avanzados, diseños temáticos y cuidados exclusivos.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/masaje-cuello-hombros-descontracturante.jpeg" alt="Masaje cuello y hombros descontracturante">
+                    <div class="gallery-overlay"><p>Descontracturante</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/diseños-pedicure-frances-pies-elegantes.jpeg" alt="Diseños pedicure frances pies elegantes">
+                    <div class="gallery-overlay"><p>Pedicure Francés</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/diseños-uñas-acrilicas-cortas-naturales-2023.jpeg" alt="Diseños uñas acrilicas cortas naturales 2023">
+                    <div class="gallery-overlay"><p>Uñas Cortas Naturales</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/diseños-uñas-navidad-rojo-verde-dorado.jpeg" alt="Diseños uñas navidad rojo verde dorado">
+                    <div class="gallery-overlay"><p>Navidad</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/diseños-uñas-verano-colores-neon-pastel.jpeg" alt="Diseños uñas verano colores neon pastel">
+                    <div class="gallery-overlay"><p>Verano Neon</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/diseños-uñas-minimalistas-sencillos-elegantes.jpeg" alt="Diseños uñas minimalistas sencillos elegantes">
+                    <div class="gallery-overlay"><p>Minimalistas</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jelly-pedicure-spa-hidratacion-pies-secos.jpeg" alt="Jelly pedicure spa hidratacion pies secos">
+                    <div class="gallery-overlay"><p>Jelly Pedicure</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/manicura-rusa-combinada-esmaltado-semipermanente.jpeg" alt="Manicura rusa combinada esmaltado semipermanente">
+                    <div class="gallery-overlay"><p>Manicura Rusa</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-ayurveda-tradicional-indio-bienestar.jpeg" alt="Masaje ayurveda tradicional indio bienestar">
+                    <div class="gallery-overlay"><p>Ayurveda</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-craneofacial-alivio-tension-cabeza.jpeg" alt="Masaje craneofacial alivio tension cabeza">
+                    <div class="gallery-overlay"><p>Craneofacial</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-deportivo-pre-post-competencia.jpeg" alt="Masaje deportivo pre post competencia">
+                    <div class="gallery-overlay"><p>Deportivo</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-facial-rejuvenecimiento-hidratacion.jpeg" alt="Masaje facial rejuvenecimiento hidratacion">
+                    <div class="gallery-overlay"><p>Facial Rejuvenecedor</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-para-embarazadas-cuidado-especial.jpeg" alt="Masaje para embarazadas cuidado especial">
+                    <div class="gallery-overlay"><p>Embarazadas</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-piedras-calientes-volcanicas-relajacion.jpeg" alt="Masaje piedras calientes volcanicas relajacion">
+                    <div class="gallery-overlay"><p>Piedras Calientes</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pack-spa-pareja-masaje-relajante-romantico.jpeg" alt="Pack spa pareja masaje relajante romantico">
+                    <div class="gallery-overlay"><p>Pack Pareja</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pedicure-con-parafina-hidratacion-profunda.jpeg" alt="Pedicure con parafina hidratacion profunda">
+                    <div class="gallery-overlay"><p>Parafina</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pedicure-medico-hongos-uñas-tratamiento.jpeg" alt="Pedicure medico hongos uñas tratamiento">
+                    <div class="gallery-overlay"><p>Pedicure Médico</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pedicure-quirurgico-uñas-encarnadas-solucion.jpeg" alt="Pedicure quirurgico uñas encarnadas solucion">
+                    <div class="gallery-overlay"><p>Quirúrgico</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/promociones-especiales-descuentos-paquete.jpeg" alt="Promociones especiales descuentos paquete">
+                    <div class="gallery-overlay"><p>Promociones</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/reflexoterapia-puntos-presion-salud.jpeg" alt="Reflexoterapia puntos presion salud">
+                    <div class="gallery-overlay"><p>Reflexoterapia</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/trabajo-equipo-profesional-atencion.jpeg" alt="Trabajo equipo profesional atencion">
+                    <div class="gallery-overlay"><p>Nuestro Equipo</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/tratamiento-callos-durezas-pies-limpieza.jpeg" alt="Tratamiento callos durezas pies limpieza">
+                    <div class="gallery-overlay"><p>Limpieza Pies</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-encapsuladas-3d-flores-mariposas.jpeg" alt="Uñas encapsuladas 3d flores mariposas">
+                    <div class="gallery-overlay"><p>Encapsuladas 3D</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-francesas-invertidas-colores-moderno.jpeg" alt="Uñas francesas invertidas colores moderno">
+                    <div class="gallery-overlay"><p>Francesas Invertidas</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-metalizadas-cromadas-brillos-intensos.jpeg" alt="Uñas metalizadas cromadas brillos intensos">
+                    <div class="gallery-overlay"><p>Metalizadas</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-navidad-2023-tematicas-festivas.jpeg" alt="Uñas navidad 2023 tematicas festivas">
+                    <div class="gallery-overlay"><p>Navidad 2023</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-ombre-degrade-colores-tendencia.jpeg" alt="Uñas ombre degradé colores tendencia">
+                    <div class="gallery-overlay"><p>Efecto Ombre</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-para-halloween-terror-diseños-creativos.jpeg" alt="Uñas para halloween terror diseños creativos">
+                    <div class="gallery-overlay"><p>Halloween</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-para-niñas-infantiles-divertidas.jpeg" alt="Uñas para niñas infantiles divertidas">
+                    <div class="gallery-overlay"><p>Infantiles</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-para-san-valentin-corazones-rosas.jpeg" alt="Uñas para san valentin corazones rosas">
+                    <div class="gallery-overlay"><p>San Valentín</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-polygel-esculpidas-largas-almendra.jpeg" alt="Uñas polygel esculpidas largas almendra">
+                    <div class="gallery-overlay"><p>Polygel Almendra</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-press-on-adhesivas-rapidas-postizas.jpeg" alt="Uñas press on adhesivas rapidas postizas">
+                    <div class="gallery-overlay"><p>Press On</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-primavera-flores-colores-vivos.jpeg" alt="Uñas primavera flores colores vivos">
+                    <div class="gallery-overlay"><p>Primavera</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/uñas-soft-gel-delgadas-naturales-cuidado.jpeg" alt="Uñas soft gel delgadas naturales cuidado">
+                    <div class="gallery-overlay"><p>Soft Gel</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding faq-section">
+        <div class="container">
+            <h2 class="section-title">Dudas y Respuestas</h2>
+            <p class="section-subtitle">Resolvemos las preguntas más frecuentes sobre nuestros servicios en Maipú.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Dónde están ubicados y a qué zonas llegan?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Estamos ubicados en <strong>Maipú</strong>. Somos fácilmente accesibles para quienes buscan "uñas cerca de mí". Atendemos clientes de Maipú, Puente Alto, San Bernardo, Santiago Centro y toda la Región Metropolitana.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Qué tipos de uñas hacen?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Ofrecemos todo tipo de técnicas: <strong>uñas acrílicas</strong>, <strong>uñas de gel</strong>, <strong>uñas polygel</strong>, <strong>uñas esculpidas</strong> y <strong>uñas press on</strong>. También hacemos <strong>manicura rusa</strong> y <strong>manicura francesa</strong>, tanto sencillas como decoradas.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Hacen uñas para eventos especiales como bodas?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        ¡Sí! Somos especialistas en <strong>uñas para boda</strong>, <strong>uñas para graduación</strong> y fiestas. Diseñamos <strong>uñas elegantes</strong> y <strong>uñas decoradas</strong> a medida.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Atienden hombres y niños?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutamente. Tenemos servicios de <strong>pedicure para hombres</strong>, <strong>masajes para hombres</strong> y cuidado masculino general. Para las pequeñas, ofrecemos <strong>uñas para niñas</strong> y <strong>manicura infantil</strong> de forma segura y divertida.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Qué marcas de productos usan?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Utilizamos marcas de alta calidad como <strong>esmalte OPI</strong>, <strong>Venalisa</strong>, <strong>Sesderma</strong> y <strong>Isdin</strong> para el cuidado de uñas y cejas (Benefit, NYX). Garantizamos productos seguros y duraderos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section-padding contact-clean">
+        <div class="container">
+            <h2 class="section-title">Reserva tu Hora Hoy</h2>
+            <p class="section-subtitle">Estamos listos para recibirte en AMYSTUDIO Maipú.</p>
+
+            <div class="contact-card">
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <h4>WhatsApp Directo</h4>
+                        <p>+56 9 4243 1681</p>
+                        <a href="https://wa.me/56942431681" class="btn" style="font-size: 0.8rem; margin-top:10px;">Escribir Ahora</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>Ubicación</h4>
+                        <p>Maipú, Santiago</p>
+                        <small>Cerca de transporte público</small>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <h4>Horario</h4>
+                        <p>Lunes a Sábado</p>
+                        <p>09:00 - 20:00 Hrs</p>
+                    </div>
+                </div>
+                <p style="color: #666; font-size: 0.9rem;">
+                    También aceptamos <strong>Gift Card Spa</strong> y <strong>certificados de regalo</strong>.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -667,48 +1019,77 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="logo-container" style="margin-bottom:20px;">
-                        <img src="images/logo-grado33.jpg" alt="Logo" height="60">
+                    <h4>AMYSTUDIO 🟢</h4>
+                    <p>Tu salón de belleza integral en Maipú.</p>
+                    <br>
+                    <div class="socials">
+                        <a href="#" style="margin-right:15px; color:white;"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="#" style="margin-right:15px; color:white;"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="#" style="color:white;"><i class="fa-brands fa-tiktok fa-lg"></i></a>
                     </div>
-                    <p>Expertos en estampado y sublimación en Barinas, Venezuela. Envíos a todo el estado.</p>
                 </div>
+                
                 <div class="footer-col">
-                    <h4>Categorías</h4>
-                    <ul>
-                        <li><a href="#camisetas">Camisetas Familia</a></li>
-                        <li><a href="#sueteres">Buzos de Marca</a></li>
-                        <li><a href="#sueteres">Buzos Oversize</a></li>
-                        <li><a href="#materiales">Materiales</a></li>
+                    <h4>Servicios Top</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Uñas Acrílicas Maipú</a></li>
+                        <li><a href="#">Microblading Cejas</a></li>
+                        <li><a href="#">Drenaje Linfático</a></li>
+                        <li><a href="#">Spa para Parejas</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li>📱 WhatsApp: +58 426-1728306</li>
-                        <li>📍 Barinas, Venezuela</li>
-                        <li>🚚 Envíos Nacionales</li>
+                    <h4>Enlaces</h4>
+                    <ul class="footer-links">
+                        <li><a href="#galeria">Galería de Fotos</a></li>
+                        <li><a href="#galeria-especial">Servicios Especiales</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                        <li><a href="#contacto">Reserva Online</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="text-center" style="border-top: 1px solid #333; padding-top: 20px;">
-                <p>&copy; 2023 EstilosGrado33. Todos los derechos reservados.</p>
+            
+            <div class="copyright">
+                <p>&copy; 2023 AMYSTUDIO Maipú. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/584261728306" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/56942431681?text=Hola!%20Quiero%20reservar%20una%20hora%20en%20AMYSTUDIO" class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Scripts -->
     <script>
+        // Mobile Menu Toggle
         function toggleMenu() {
-            const nav = document.getElementById('navMenu');
+            const nav = document.getElementById('navLinks');
             nav.classList.toggle('active');
         }
-    </script>
 
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
