@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>AMYSTUDIO 🟢 | Uñas, Masajes y Spa en Maipú</title>
-    <meta name="description" content="AMYSTUDIO Maipú: Expertos en uñas acrílicas, uñas de gel, manicura rusa, uñas polygel. Microblading, masajes terapéuticos, drenaje linfático y spa para parejas.">
-    <meta name="keywords" content="uñas maipú, manicura maipú, uñas acrílicas, uñas de gel, uñas polygel, microblading cejas, masajes terapéuticos, drenaje linfático, maderoterapia, spa para parejas, pedicure spa, uñas 2023">
+    <title>AMYSTUDIO | Spa de Uñas, Cejas y Pestañas en Maipú, Santiago</title>
+    <meta name="description" content="AMYSTUDIO - Tu centro de belleza integral en Maipú, Santiago. Especialistas en uñas acrílicas, uñas de gel, manicura rusa, polygel, microblading, lifting de pestañas, perfilado de cejas, masajes reductores, drenaje linfático, maderoterapia, limpieza facial, pedicura spa y tratamientos corporales. Reserva tu hora hoy.">
+    <meta name="keywords" content="uñas maipú, spa uñas santiago, manicura rusa, uñas acrílicas, uñas de gel, uñas polygel, microblading cejas, lifting pestañas, perfilado cejas, masajes reductores, drenaje linfático, maderoterapia, limpieza facial, pedicura spa, estética maipú, centro de belleza santiago, nail art, esmaltado permanente, uñas baby boomer, uñas stiletto, tratamiento facial, masaje descontracturante, spa relajación">
     <meta name="author" content="AMYSTUDIO">
     <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/jpeg" href="images/logo-spad-de-uñas-cejas-pestañas-en-santaigo-amystudio-.jpg">
 
     <!-- Fuentes e Iconos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -662,6 +663,65 @@
             opacity: 1;
         }
 
+        /* --- ABOUT / QUIENES SOMOS --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-logo-wrap {
+            text-align: center;
+        }
+        .about-logo {
+            max-width: 320px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(46, 139, 87, 0.2);
+            transition: transform 0.4s ease;
+        }
+        .about-logo:hover {
+            transform: scale(1.03);
+        }
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .about-content strong {
+            color: var(--primary-color);
+        }
+        .about-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .about-stat {
+            text-align: center;
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            flex: 1;
+            min-width: 120px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        .about-stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-family: 'Playfair Display', serif;
+        }
+        .about-stat-label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .nav-links {
@@ -687,6 +747,20 @@
             .section-title {
                 font-size: 2rem;
             }
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .about-logo {
+                max-width: 220px;
+                margin: 0 auto;
+            }
+            .about-stats {
+                gap: 15px;
+            }
+            .about-stat {
+                padding: 15px 10px;
+            }
             .featured-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -701,13 +775,16 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <!-- Logo actualizado a imagen -->
+            <!-- Logo AMYSTUDIO -->
             <div class="logo">
-                <img src="images/logo2.jpg" alt="AMYSTUDIO Logo">
+                <a href="#inicio">
+                    <img src="images/logo-spad-de-uñas-cejas-pestañas-en-santaigo-amystudio-.jpg" alt="AMYSTUDIO - Spa de Uñas, Cejas y Pestañas en Maipú Santiago">
+                </a>
             </div>
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Quiénes Somos</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#destacados">Destacados</a></li>
                     <li><a href="#galeria">Galería</a></li>
@@ -806,6 +883,38 @@
             <div class="seo-block">
                 <h3>💆 Para Quién: Una Experiencia Para Todos</h3>
                 <p>Creemos que la belleza es para todos. Ofrecemos <span class="keyword-highlight">uñas para mujeres</span> exigentes, pero también <span class="keyword-highlight">uñas para niñas</span> con adorables diseños de <span class="keyword-highlight">uñas de princesas</span> y <span class="keyword-highlight">manicura infantil</span>. Para caballeros, contamos con <span class="keyword-highlight">cuidado masculino</span>, <span class="keyword-highlight">pedicure para hombres</span> y <span class="keyword-highlight">masajes para hombres</span>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="nosotros" class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-logo-wrap">
+                    <img src="images/logo-spad-de-uñas-cejas-pestañas-en-santaigo-amystudio-.jpg" alt="AMYSTUDIO Logo - Spa de belleza en Maipú Santiago" class="about-logo">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title" style="text-align:left; padding-bottom:10px;">Quiénes Somos</h2>
+                    <div style="width:80px;height:3px;background-color:var(--accent-color);margin-bottom:20px;"></div>
+                    <p>Somos <strong>AMYSTUDIO</strong>, tu centro de belleza integral ubicado en <strong>Maipú, Santiago</strong>. Nos dedicamos a realzar tu belleza natural con tratamientos de alta calidad en uñas, cejas, pestañas, faciales y terapias corporales.</p>
+                    <p>Contamos con un equipo de profesionales certificados y apasionados por la estética, que utilizan productos premium y las últimas técnicas del mercado para garantizar resultados excepcionales en cada visita.</p>
+                    <p>Nuestra misión es que cada cliente salga sintiéndose renovada, confiada y feliz. Ya sea que busques unas uñas impecables, cejas perfectas, un masaje relajante o un tratamiento facial rejuvenecedor, en AMYSTUDIO encontrarás todo lo que necesitas en un ambiente cálido y profesional.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="about-stat-number">500+</span>
+                            <span class="about-stat-label">Clientes Satisfechas</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">30+</span>
+                            <span class="about-stat-label">Servicios Disponibles</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">100%</span>
+                            <span class="about-stat-label">Compromiso y Calidad</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1439,6 +1548,7 @@
                 <div class="footer-col">
                     <h4>Enlaces</h4>
                     <ul class="footer-links">
+                        <li><a href="#nosotros">Quiénes Somos</a></li>
                         <li><a href="#galeria">Galería de Fotos</a></li>
                         <li><a href="#galeria-especial">Servicios Especiales</a></li>
                         <li><a href="#faq">Preguntas Frecuentes</a></li>
@@ -1448,7 +1558,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 AMYSTUDIO Maipú. Todos los derechos reservados.</p>
+                <p>&copy; 2026 AMYSTUDIO Maipú. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
