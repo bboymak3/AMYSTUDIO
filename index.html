@@ -512,6 +512,156 @@
             background-color: #20b857;
         }
 
+        /* --- LIGHTBOX --- */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 60px rgba(0,0,0,0.8);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .lightbox-overlay.active img {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            z-index: 10001;
+            transition: color 0.3s, transform 0.3s;
+            background: rgba(255,255,255,0.1);
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .lightbox-close:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            padding: 15px;
+            transition: color 0.3s, transform 0.3s;
+            z-index: 10001;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        .lightbox-nav:hover {
+            color: var(--accent-color);
+            transform: translateY(-50%) scale(1.15);
+        }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        .lightbox-caption {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 0.95rem;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 25px;
+            border-radius: 30px;
+            white-space: nowrap;
+            max-width: 90vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .lightbox-counter {
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* --- FEATURED SECTION --- */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .featured-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            height: 220px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .featured-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(46, 139, 87, 0.25);
+        }
+        .featured-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .featured-item:hover img {
+            transform: scale(1.08);
+        }
+        .featured-item .f-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(26, 82, 51, 0.92));
+            padding: 25px 12px 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .featured-item:hover .f-overlay {
+            opacity: 1;
+        }
+        .featured-item .f-overlay p {
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .featured-item .f-icon {
+            position: absolute;
+            top: 10px; right: 10px;
+            background: var(--accent-color);
+            color: #fff;
+            width: 30px; height: 30px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .featured-item:hover .f-icon {
+            opacity: 1;
+        }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .nav-links {
@@ -537,6 +687,12 @@
             .section-title {
                 font-size: 2rem;
             }
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .featured-item {
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -553,6 +709,7 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#destacados">Destacados</a></li>
                     <li><a href="#galeria">Galería</a></li>
                     <li><a href="#galeria-especial">Especiales</a></li>
                     <li><a href="#faq">Dudas</a></li>
@@ -649,6 +806,162 @@
             <div class="seo-block">
                 <h3>💆 Para Quién: Una Experiencia Para Todos</h3>
                 <p>Creemos que la belleza es para todos. Ofrecemos <span class="keyword-highlight">uñas para mujeres</span> exigentes, pero también <span class="keyword-highlight">uñas para niñas</span> con adorables diseños de <span class="keyword-highlight">uñas de princesas</span> y <span class="keyword-highlight">manicura infantil</span>. Para caballeros, contamos con <span class="keyword-highlight">cuidado masculino</span>, <span class="keyword-highlight">pedicure para hombres</span> y <span class="keyword-highlight">masajes para hombres</span>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Destacados: 20 Fotos Nuevas -->
+    <section id="destacados" class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Trabajos Destacados 2026</h2>
+            <p class="section-subtitle">Nuestras tecnicas mas recientes y solicitadas. Haz clic en cualquier imagen para verla en grande.</p>
+
+            <div class="featured-grid">
+                <!-- Uñas Destacadas -->
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/manicura-rusa-profesional-amystudio-maipu-santiago.jpg" alt="Manicura Rusa Profesional en AMYSTUDIO Maipu Santiago">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Manicura Rusa Profesional</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/uñas-de-gel-esculturales-amystudio-maipu-santiago.jpg" alt="Uñas de Gel Esculturales en AMYSTUDIO Maipu">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Gel Esculturales</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/uñas-acrílicas-diseño-personalizado-amystudio-maipu-santiago.jpg" alt="Uñas Acrílicas Diseño Personalizado AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Acrílicas Personalizadas</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/manicura-rusa-limpieza-profunda-amystudio-maipu-santiago.jpg" alt="Manicura Rusa Limpieza Profunda AMYSTUDIO Maipu">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Manicura Rusa Profunda</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/esmaltado-permanente-larga-duración-amystudio-maipu-santiago.jpg" alt="Esmaltado Permanente Larga Duración AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Esmaltado Permanente</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/nail-art-cristales-lujo-amystudio-maipu-santiago.jpg" alt="Nail Art Cristales de Lujo AMYSTUDIO Maipu">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Nail Art Cristales</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/uñas-baby-boomer-difuminado-elegante-amystudio-maipu-santiago.jpg" alt="Uñas Baby Boomer Difuminado Elegante AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Baby Boomer</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/manicura-francesa-estilo-clásico-amystudio-maipu-santiago.jpg" alt="Manicura Francesa Estilo Clásico AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Francesa Clásica</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/uñas-cortas-esmaltado-impecable-amystudio-maipu-santiago.jpg" alt="Uñas Cortas Esmaltado Impecable AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Cortas Impecables</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/uñas-largas-stiletto-acrílicas-amystudio-maipu-santiago.jpg" alt="Uñas Largas Stiletto Acrílicas AMYSTUDIO Maipu">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Stiletto Acrílicas</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/uñas-esculpidas-polygel-resistencia-amystudio-maipu-santiago.jpg" alt="Uñas Esculpidas Polygel Resistencia AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Polygel Resistencia</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/uñas-decoradas-tendencia-2026-amystudio-maipu-santiago.jpg" alt="Uñas Decoradas Tendencia 2026 AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Tendencia 2026</p></div>
+                </div>
+
+                <!-- Cejas y Pestañas Destacadas -->
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/cejas-perfectas-perfilado-amystudio-maipu-santiago.jpg" alt="Cejas Perfectas Perfilado AMYSTUDIO Maipu">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Cejas Perfectas</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/lifting-de-pestañas-mirada-radiante-amystudio-maipu-santiago.jpg" alt="Lifting de Pestañas Mirada Radiante AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Lifting Pestañas</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/pestañas-pelo-a-pelo-volumen-amystudio-maipu-santiago.jpg" alt="Pestañas Pelo a Pelo Volumen AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Pestañas Volumen</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/microblading-cejas-pelo-a-pelo-amystudio-maipu-santiago.jpg" alt="Microblading Cejas Pelo a Pelo AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Microblading</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/perfilado-de-cejas-diseño-mirada-amystudio-maipu-santiago.jpg" alt="Perfilado de Cejas Diseño Mirada AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Perfilado Cejas</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/diseño-de-cejas-henna-perfilado-amystudio-maipu-santiago.jpg" alt="Diseño de Cejas Henna Perfilado AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Cejas con Henna</p></div>
+                </div>
+
+                <!-- Masajes y Tratamientos Destacados -->
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/masajes-reductores-abdomen-amystudio-maipu-santiago.jpg" alt="Masajes Reductores Abdomen AMYSTUDIO Maipu">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Reductor Abdominal</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/drenaje-linfático-corporal-detox-amystudio-maipu-santiago.jpg" alt="Drenaje Linfático Corporal Detox AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Drenaje Detox</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/maderoterapia-estética-reductiva-amystudio-maipu-santiago.jpg" alt="Maderoterapia Estética Reductiva AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Maderoterapia</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/masaje-descontracturante-alivio-estrés-amystudio-maipu-santiago.jpg" alt="Masaje Descontracturante Alivio Estrés AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Descontracturante</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/masaje-reductor-brasileño-modelado-amystudio-maipu-santiago.jpg" alt="Masaje Reductor Brasileño Modelado AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Brasileño Modelado</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/masaje-relajante-aceites-esenciales-amystudio-maipu-santiago.jpg" alt="Masaje Relajante Aceites Esenciales AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Aceites Esenciales</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/limpieza-facial-profunda-hidratación-amystudio-maipu-santiago.jpg" alt="Limpieza Facial Profunda Hidratación AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Limpieza Facial</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/tratamiento-facial-rejuvenecimiento-amystudio-maipu-santiago.jpg" alt="Tratamiento Facial Rejuvenecimiento AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Facial Rejuvenecedor</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/hidratación-facial-máscara-led-amystudio-maipu-santiago.jpg" alt="Hidratación Facial Máscara LED AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Máscara LED</p></div>
+                </div>
+                <div class="featured-item" onclick="openLightboxBySrc(this)">
+                    <img src="images/exfoliación-corporal-piel-renovada-amystudio-maipu-santiago.jpg" alt="Exfoliación Corporal Piel Renovada AMYSTUDIO">
+                    <div class="f-icon"><i class="fa-solid fa-expand"></i></div>
+                    <div class="f-overlay"><p>Exfoliación Corporal</p></div>
+                </div>
             </div>
         </div>
     </section>
@@ -768,6 +1081,48 @@
                 <div class="gallery-item">
                     <img src="images/ambiente-relajante-spa-bienestar-comodidad.jpeg" alt="Ambiente relajante spa bienestar comodidad">
                     <div class="gallery-overlay"><p>Ambiente Zen</p></div>
+                </div>
+
+                <!-- NUEVAS FOTOS 2026 -->
+                <div class="gallery-item">
+                    <img src="images/esmaltado-semipermanente-brillo-espejo-amystudio-maipu-santiago.jpg" alt="Esmaltado Semipermanente Brillo Espejo AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Brillo Espejo</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pedicura-spa-pies-suaves-amystudio-maipu-santiago.jpg" alt="Pedicura Spa Pies Suaves AMYSTUDIO Maipu">
+                    <div class="gallery-overlay"><p>Pedicura Spa</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/spa-de-pies-relajación-total-amystudio-maipu-santiago.jpg" alt="Spa de Pies Relajación Total AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Spa de Pies</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/manos-y-pies-pack-promocional-amystudio-maipu-santiago.jpg" alt="Manos y Pies Pack Promocional AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Pack Promocional</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/manicura-para-hombres-cuidado-prolijo-amystudio-maipu-santiago.jpg" alt="Manicura para Hombres Cuidado Prolijo AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Manicura Caballeros</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/belleza-integral-mujer-moderna-amystudio-maipu-santiago.jpg" alt="Belleza Integral Mujer Moderna AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Belleza Integral</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/estética-profesional-salud-belleza-amystudio-maipu-santiago.jpg" alt="Estética Profesional Salud Belleza AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Estética Profesional</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cuidado-personal-bienestar-femenino-amystudio-maipu-santiago.jpg" alt="Cuidado Personal Bienestar Femenino AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Bienestar Femenino</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-brasileño-drenaje-moldeador-amystudio-maipu-santiago.jpg" alt="Masaje Brasileño Drenaje Moldeador AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Brasileño Drenaje</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/reducir-abdomen-maderoterapia-eficaz-amystudio-maipu-santiago.jpg" alt="Reducir Abdomen Maderoterapia Eficaz AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Maderoterapia Abdomen</p></div>
                 </div>
             </div>
         </div>
@@ -916,6 +1271,48 @@
                     <img src="images/uñas-soft-gel-delgadas-naturales-cuidado.jpeg" alt="Uñas soft gel delgadas naturales cuidado">
                     <div class="gallery-overlay"><p>Soft Gel</p></div>
                 </div>
+
+                <!-- NUEVAS FOTOS ESPECIALES 2026 -->
+                <div class="gallery-item">
+                    <img src="images/bienestar-relax-terapia-corporal-amystudio-maipu-santiago.jpg" alt="Bienestar Relax Terapia Corporal AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Terapia Corporal</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/relax-total-masaje-aromaterapia-amystudio-maipu-santiago.jpg" alt="Relax Total Masaje Aromaterapia AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Aromaterapia</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-relajante-aceites-esenciales-amystudio-maipu-santiago.jpg" alt="Masaje Relajante con Aceites Esenciales AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Aceites Esenciales</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-descontracturante-alivio-estrés-amystudio-maipu-santiago.jpg" alt="Masaje Descontracturante Alivio Estrés AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Alivio Estrés</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/drenaje-linfático-corporal-detox-amystudio-maipu-santiago.jpg" alt="Drenaje Linfático Corporal Detox AMYSTUDIO Maipu">
+                    <div class="gallery-overlay"><p>Detox Corporal</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/masaje-brasileño-drenaje-moldeador-amystudio-maipu-santiago.jpg" alt="Masaje Brasileño Drenaje Moldeador AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Brasileño Moldeador</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/maderoterapia-estética-reductiva-amystudio-maipu-santiago.jpg" alt="Maderoterapia Estética Reductiva AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Maderoterapia</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pestañas-pelo-a-pelo-volumen-amystudio-maipu-santiago.jpg" alt="Pestañas Pelo a Pelo Volumen AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Pestañas Volumen</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/tratamiento-facial-rejuvenecimiento-amystudio-maipu-santiago.jpg" alt="Tratamiento Facial Rejuvenecimiento AMYSTUDIO">
+                    <div class="gallery-overlay"><p>Facial Rejuvenecedor</p></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/spa-de-pies-relajación-total-amystudio-maipu-santiago.jpg" alt="Spa de Pies Relajación Total AMYSTUDIO Maipu">
+                    <div class="gallery-overlay"><p>Spa de Pies</p></div>
+                </div>
             </div>
         </div>
     </section>
@@ -1057,6 +1454,16 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+        <span class="lightbox-counter" id="lightbox-counter"></span>
+        <span class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();navigateLightbox(-1)"><i class="fa-solid fa-chevron-left"></i></span>
+        <img id="lightbox-img" src="" alt="">
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation();navigateLightbox(1)"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="lightbox-caption" id="lightbox-caption"></span>
+    </div>
+
     <a href="https://wa.me/56942431681?text=Hola!%20Quiero%20reservar%20una%20hora%20en%20AMYSTUDIO" class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
@@ -1076,7 +1483,79 @@
             });
         });
 
-        // FAQ Accordion
+        // ========== LIGHTBOX ==========
+        let lbImages = [];
+        let lbIndex = 0;
+
+        function collectAllImages() {
+            lbImages = [];
+            document.querySelectorAll('.gallery-item img, .featured-item img').forEach(img => {
+                lbImages.push({ src: img.src, alt: img.alt });
+            });
+        }
+
+        function openLightboxBySrc(el) {
+            collectAllImages();
+            const img = el.querySelector('img');
+            const idx = lbImages.findIndex(i => i.src === img.src);
+            if (idx >= 0) openLightbox(idx);
+        }
+
+        function openLightbox(index) {
+            if (lbImages.length === 0) collectAllImages();
+            lbIndex = index;
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            const lbCap = document.getElementById('lightbox-caption');
+            const lbCnt = document.getElementById('lightbox-counter');
+            lbImg.src = lbImages[lbIndex].src;
+            lbImg.alt = lbImages[lbIndex].alt;
+            lbCap.textContent = lbImages[lbIndex].alt;
+            lbCnt.textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+            lb.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(() => lb.classList.add('active'));
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('active');
+            setTimeout(() => {
+                lb.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        function navigateLightbox(dir) {
+            lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+            document.getElementById('lightbox-img').src = lbImages[lbIndex].src;
+            document.getElementById('lightbox-img').alt = lbImages[lbIndex].alt;
+            document.getElementById('lightbox-caption').textContent = lbImages[lbIndex].alt;
+            document.getElementById('lightbox-counter').textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+        }
+
+        // Click on gallery-items
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.gallery-item').forEach((item, i) => {
+                item.style.cursor = 'pointer';
+                item.addEventListener('click', () => {
+                    collectAllImages();
+                    const img = item.querySelector('img');
+                    const idx = lbImages.findIndex(j => j.src === img.src);
+                    if (idx >= 0) openLightbox(idx);
+                });
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (!lb || !lb.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
         function toggleFaq(element) {
             const item = element.parentElement;
             
