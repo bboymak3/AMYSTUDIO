@@ -1,8 +1,42 @@
+# robots.txt - AMYSTUDIO Spa de Uñas, Cejas y Pestañas en Maipú, Santiago
+# https://amystudiospa.com
+
 User-agent: *
 Allow: /
 
+# Bloquear contenido no relevante de coporo heredado del repo
+Disallow: /servicios/
+Disallow: /soluciones/
+Disallow: /menu.html
+Disallow: /tmp_remote.html
+Disallow: /frontend/
+Disallow: /project.mobirise
+Disallow: /_redirects.txt
+
+# Crawlers de IA permitidos
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 # Sitemap
-Sitemap: https://bboymak3.github.io/AMYSTUDIO/sitemap.xml
+Sitemap: https://amystudiospa.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
